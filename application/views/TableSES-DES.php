@@ -1,19 +1,22 @@
 <!--begin::Table-->
-<table class="table table-row-dashed table-striped table-row-gray-300 align-middle gs-0 gy-4">
+<h4 class="mb-3 mt-10">
+    Perhitungan SES-DES (Nilai Alpha = 0.9)
+</h4>
+<table class="table table-row-dashed table-striped table-row-gray-500 align-middle gs-0 gy-4">
     <!--begin::Table head-->
     <thead>
         <tr class="fw-bolder text-gray-800">
-            <th class="w-80px text-center">
+            <th class="min-w-100px text-center">
                 No
             </th>
-            <th class="w-80px">Tahun</th>
-            <th class="text-center">Jumlah</th>
-            <th class="">S<sub>1t</sub></th>
-            <th class="">S<sub>2t</sub></th>
-            <th class="">A<sub>t</sub></th>
-            <th class="">B<sub>t</sub></th>
-            <th class="">S<sub>t+m</sub></th>
-            <th class="">Mape</th>
+            <th class="min-w-100px text-center">Tahun</th>
+            <th class="text-center min-w-100px">Jumlah</th>
+            <th class="min-w-100px">S<sub>1t</sub></th>
+            <th class="min-w-100px">S<sub>2t</sub></th>
+            <th class="min-w-100px">A<sub>t</sub></th>
+            <th class="min-w-100px">B<sub>t</sub></th>
+            <th class="min-w-100px">S<sub>t+m</sub></th>
+            <th class="text-end">Mape</th>
         </tr>
     </thead>
     <!--end::Table head-->
@@ -25,21 +28,21 @@
         ?>
             <tr>
                 <td class="text-center"><?= $n ?></td>
-                <td><?= $v->tahun ?></td>
+                <td class="text-center"><?= $v->tahun ?></td>
                 <td class="text-center"><?= $v->jumlah ?></td>
                 <td><?= $s1t[$i] ?></td>
                 <td><?= $s2t[$i] ?></td>
                 <td><?= $At[$i] ?></td>
                 <td><?= $Bt[$i] ?></td>
                 <td><?= $Sm[$i] ?></td>
-                <td><?= $Mape[$i] ?></td>
+                <td class="text-end"><?= $Mape[$i] ?></td>
             </tr>
         <?php $n++; $i++;
         } ?>
         <tr>
             <td colspan="6"></td>
             <td colspan="2">Avg. Mape</td>
-            <td><?= number_format($Rerata,2) ?></td>
+            <td class="text-end"><?= number_format($Rerata,2) ?></td>
         </tr>
     </tbody>
     <!--end::Table body-->

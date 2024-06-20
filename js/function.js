@@ -46,7 +46,7 @@ function toTableSESDES() {
 
 function alpa() {
     $.get(
-        base_url + "Home/prosesAlpa",
+        base_url + "Home/prosesAlpa/1",
         function (data) {
             //console.log(data)
             $('.alpha').html(data)

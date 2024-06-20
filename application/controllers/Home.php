@@ -72,12 +72,20 @@ class Home extends CI_Controller
 			'Mape' => $Mape,
 			'Rerata' => $jm / (count($newData) - 1)
 		);
+		$Out = $this->hitungAlpa($get_);
+		
+		$this->load->view('tabelAlpa', $Out);
 		$this->load->view('tableSES-DES', $data);
 	}
 
-	function prosesAlpa()
+	function prosesAlpa($id)
 	{
-		$get_ = $this->M_home->getData('data', 'id_kategori = 1', 'result');
+		$get_= $this->M_home->getData('data', 'id_kategori = '.$id, 'result');
+		$Out = $this->hitungAlpa($get_);
+		$this->load->view('tabelAlpa', $Out);
+	}
+
+	function hitungAlpa($get_){
 		$i = 0;
 		foreach ($get_ as $v) {
 			$newData[$i] = $v->jumlah;
@@ -108,7 +116,7 @@ class Home extends CI_Controller
 		$Out['alpa'] = $alpha;
 		$Out['Mape'] = $rata;
 
-		$this->load->view('tabelAlpa', $Out);
+		return $Out;
 	}
 
 	function alpaKategori()
