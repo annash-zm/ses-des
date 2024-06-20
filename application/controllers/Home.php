@@ -103,7 +103,7 @@ class Home extends CI_Controller
 				$s1t[$z] = number_format($alpha[$i] * $newData[$z] + (1 - $alpha[$i]) * $newData[$z - 1], 2);
 				$s2t[$z] = number_format($alpha[$i] * $s1t[$z] + (1 - $alpha[$i]) * $s2t[$z - 1], 2);
 				$At[$z] = number_format(2 * $s1t[$z] - $s2t[$z], 2);
-				$Mape[$z] = number_format(abs(($At[$z] - $newData[$z]) / $At[$z] * 100), 2);
+				$Mape[$z] = (abs(($At[$z] - $newData[$z]) / $At[$z] * 100));
 				$jm = $Mape[$z] + $jm;
 
 				$out[$z - 1][$i] = $At[$z];
