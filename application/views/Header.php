@@ -56,43 +56,66 @@
 							</a>
 						</div>
 						<!--end::Logo-->
+
+						 <!--begin::Wrapper-->
+						 <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1 fs-5">
+                            <!--begin::Navbar-->
+                            <div class="d-flex align-items-stretch" id="kt_header_nav">
+                                <div></div>
+                            </div>
+                            <!--end::Navbar-->
+                            <!--begin::Toolbar wrapper-->
+                            <div class="d-flex align-items-stretch flex-shrink-0">
+                                <!--begin::Search-->
+                                <div class="d-flex align-items-stretch ms-1 ms-lg-3">
+                                    <!--begin::Menu-->
+                                    <div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
+
+                                        <a class="menu-item" href="<?= base_url() ?>">
+                                            <span class="menu-link <?= $menu[0] ?> py-3">
+                                                <span class="menu-title">Nilai Alpha</span>
+                                                <span class="menu-arrow d-lg-none"></span>
+                                            </span>
+                                        </a>
+
+                                        <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-lg-1">
+                                            <span class="menu-link py-3 <?= $menu[1] ?>">
+                                                <span class="menu-title">Perhitungan SES-DES</span>
+                                                <span class="menu-arrow"></span>
+                                            </span>
+                                            <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
+                                                <div class="menu-item">
+                                                    <a class="menu-link <?= $submenu[0] ?> py-3" href="<?= site_url() ?>/home/prodi">
+                                                        <span class="menu-bullet">
+                                                            <span class="bullet bullet-dot"></span>
+                                                        </span>
+                                                        <span class="menu-title">Per Prodi</span>
+                                                    </a>
+                                                </div>
+                                                <div class="menu-item">
+                                                    <a class="menu-link py-3 <?= $submenu[1] ?>" href="<?= site_url() ?>/home/jalurMasuk">
+                                                        <span class="menu-bullet">
+                                                            <span class="bullet bullet-dot"></span>
+                                                        </span>
+                                                        <span class="menu-title">Per Jalur Masuk</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <!--end::Menu-->
+                                   
+                                </div>
+                                <!--end::Search-->
+                               
+                               
+                            </div>
+                            <!--end::Toolbar wrapper-->
+                        </div>
+                        <!--end::Wrapper-->
 					</div>
 					<!--end::Container-->
 				</div>
 				<!--end::Header-->
-				<!--begin::Toolbar-->
-				<div class="toolbar" id="kt_toolbar">
-					<!--begin::Container-->
-					<div id="kt_toolbar_container" class="container-xl d-flex flex-stack">
-						<!--begin::Page title-->
-						<div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
-							<!--begin::Title-->
-							<h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Alpha dan SES-DES</h1>
-							<!--end::Title-->
-							<!--begin::Separator-->
-							<span class="h-20px border-gray-300 border-start mx-4"></span>
-							<!--end::Separator-->
-							<!--begin::Breadcrumb-->
-							<ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
-								<!--begin::Item-->
-								<li class="breadcrumb-item text-muted">
-									<a href="" class="text-muted text-hover-primary">Home</a>
-								</li>
-								<!--end::Item-->
-								<!--begin::Item-->
-								<li class="breadcrumb-item">
-									<span class="bullet bg-gray-300 w-5px h-2px"></span>
-								</li>
-								<!--end::Item-->
-								<!--begin::Item-->
-								<li class="breadcrumb-item text-muted">SES-DES</li>
-								<!--end::Item-->
-							</ul>
-							<!--end::Breadcrumb-->
-						</div>
-						<!--end::Page title-->
-
-					</div>
-					<!--end::Container-->
-				</div>
-				<!--end::Toolbar-->

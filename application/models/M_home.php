@@ -23,4 +23,8 @@ class M_home extends CI_Model
             return $this->db->get($table)->result();
         }
     }
+
+    function saveNewData($data){
+
+    }
 }

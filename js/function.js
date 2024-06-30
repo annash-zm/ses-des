@@ -5,6 +5,7 @@ $(function () {
     toCategory()
     alpa()
     alpaKategori()
+    toJalurMasuk()
 })
 
 function toCategory() {
@@ -24,6 +25,37 @@ function toCategory() {
             toTableSESDES()
         }
     )
+}
+
+function toJalurMasuk(){
+    $.post(
+        base_url + "Home/getJalur",
+        function (data) {
+            data = JSON.parse(data)
+            var html = ''
+            for (let i in data.toOption) {
+                html += '<option value="' + data.toOption[i].id_jalur + '">' + data.toOption[i].nama_jalur + '</option>'
+            }
+
+
+            $('#select_jalur').html(html)
+            $('#select_jalur').val(data.toOption[0].id_jalur)
+            $('.kategori').html(data.toOption[0].nama_jalur)
+            toTablejalurMasuk()
+        }
+    )
+}
+
+function toTablejalurMasuk(){
+    var id = $('#select_jalur').val()
+    $.post(
+        base_url + "Home/data_jalur_masuk/" + id,
+        function (data) {
+            //console.log(data)
+            $('.jalur-masuk').html(data)
+        }
+    )
+
 }
 
 function toTableSESDES() {
